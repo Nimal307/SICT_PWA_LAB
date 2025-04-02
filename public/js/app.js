@@ -5,9 +5,9 @@ $(document).ready(function() {
 
 if("serviceWorker" in navigator) {
   navigator.serviceWorker.register("/sworker.js")
-    .then(function(registration){
+    .then((registration)=>{
         console.log("Service Worker registered with scope:", registration.scope);
-    }).catch(function(err){
+    }).catch((err)=>{
       console.log("Service worker registration failed:", err);
     });
 }
